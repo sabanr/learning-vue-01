@@ -11,18 +11,20 @@
       </nav>
     </header>
     <main>
-      <HomePage/>
+      <RobotBuilder/>
     </main>
   </div>
 </template>
 
 <script>
-import HomePage from './components/HomePage.vue';
+// import HomePage from './home/HomePage.vue';
+import RobotBuilder from './build/RobotBuilder.vue';
 
 export default {
   name: 'app',
   components: {
-    HomePage,
+    RobotBuilder,
+    // HomePage,
   },
 };
 </script>
@@ -38,7 +40,7 @@ body {
 main {
   margin: 0 auto;
   padding: 30px;
-  background-color: white;
+  background-color: lightgrey;
   width: 1024px;
   min-height: 300px;
 }
