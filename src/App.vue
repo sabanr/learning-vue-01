@@ -11,9 +11,7 @@
       </nav>
     </header>
     <main>
-      <div class="robot-name">This is a test
-        <RobotBuilder/>
-      </div>
+      <RobotBuilder/>
     </main>
   </div>
 </template>
@@ -39,6 +37,10 @@ body {
 </style>
 
 <style scoped>
+/* .content >>> .robot-name {
+  color: red;
+  border: 2px solid blue;
+} */
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
 }
