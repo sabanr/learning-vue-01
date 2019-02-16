@@ -2,39 +2,21 @@
   <div class="content">
     <button class="add-to-cart" @click="addToCart()">Add to Cart</button>
     <div class="top-row">
-      <div :class="[saleBorderClass, 'top', 'part']">
+      <!-- <div :class="[saleBorderClass, 'top', 'part']">
         <div class="robot-name">
           {{ selectedRobot.head.title }}
           <span v-show="selectedRobot.head.onSale" class="sale">Sale!</span>
         </div>
-        <img :src="selectedRobot.head.src" title="head">
-        <button @click="selectPrevHead()" class="prev-selector">&#9668;</button>
-        <button @click="selectNextHead()" class="next-selector">&#9658;</button>
-      </div>
+      </div>-->
+      <PartSelector/>
     </div>
     <div class="middle-row">
-      <div class="left part">
-        <img :src="selectedRobot.leftArm.src" title="left arm">
-        <button @click="selectPrevLeftArm()" class="prev-selector">&#9650;</button>
-        <button @click="selectNextLeftArm()" class="next-selector">&#9660;</button>
-      </div>
-      <div class="center part">
-        <img :src="selectedRobot.torso.src" title="torso">
-        <button @click="selectPrevTorso()" class="prev-selector">&#9668;</button>
-        <button @click="selectNextTorso()" class="next-selector">&#9658;</button>
-      </div>
-      <div class="right part">
-        <img :src="selectedRobot.rightArm.src" title="right arm">
-        <button @click="selectPrevRightArm()" class="prev-selector">&#9650;</button>
-        <button @click="selectNextRightArm()" class="next-selector">&#9660;</button>
-      </div>
+      <PartSelector/>
+      <PartSelector/>
+      <PartSelector/>
     </div>
     <div class="bottom-row">
-      <div class="bottom part">
-        <img :src="selectedRobot.base.src" title="base">
-        <button @click="selectPrevBase()" class="prev-selector">&#9668;</button>
-        <button @click="selectNextBase()" class="next-selector">&#9658;</button>
-      </div>
+      <PartSelector/>
     </div>
     <div>
       <h1>Cart</h1>
@@ -62,7 +44,7 @@ import PartSelector from './PartSelector.vue';
 
 export default {
   name: 'RobotBuilder',
-  components: [PartSelector],
+  components: { PartSelector },
   data() {
     return {
       availableParts,
