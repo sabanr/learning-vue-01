@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
-import store from './vstore'; // weird: I can't name it store!
+import store from './store'; // weird: I can't name it store!
 
 Vue.config.productionTip = false;
 
