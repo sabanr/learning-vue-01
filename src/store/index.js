@@ -6,11 +6,15 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     cart: [],
-    counter: 0,
   },
   mutations: {
     addRobotToCart(state, robot) {
       state.cart.push(robot);
+    },
+  },
+  getters: {
+    cartSaleItems(state) {
+      return state.cart.filter(item => item.head.onSale);
     },
   },
 });
