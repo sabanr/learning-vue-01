@@ -42,11 +42,6 @@ export default new Router({
       component: RobotHeads,
     },
     {
-      path: 'heads',
-      name: 'BrowseHeads',
-      component: RobotHeads,
-    },
-    {
       path: 'arms',
       name: 'BrowseArms',
       component: RobotArms,
