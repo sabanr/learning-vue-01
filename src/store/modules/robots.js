@@ -3,7 +3,6 @@ import axios from 'axios';
 export default {
   namespaced: true,
   state: {
-    foo: 'robots-foo',
     cart: [],
     parts: null,
   },
@@ -36,9 +35,6 @@ export default {
   getters: {
     cartSaleItems(state) {
       return state.cart.filter(item => item.head.onSale);
-    },
-    foo(state) {
-      return `robots-getter/${state.foo}`;
     },
   },
 };

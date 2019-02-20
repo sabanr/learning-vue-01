@@ -13,7 +13,12 @@
     </router-link>
     <button @click="selectPreviousPart()" class="prev-selector"></button>
     <button @click="selectNextPart()" class="next-selector"></button>
-    <span class="sale" v-show="selectedPart.onSale">Sale!</span>
+    // eslint-disable-next-line
+    <span
+      v-pin="{bottom: pinPadding, right: pinPadding}"
+      class="sale"
+      v-show="selectedPart.onSale"
+    >Sale!</span>
   </div>
 </template>
 
@@ -43,7 +48,10 @@ export default {
     },
   },
   data() {
-    return { selectedPartIndex: 0 };
+    return {
+      selectedPartIndex: 0,
+      pinPadding: '10px',
+    };
   },
   created() {
     this.emitSelectedPart();
@@ -84,9 +92,6 @@ export default {
   border: 3px solid #aaa;
 }
 .sale {
-  position: absolute;
-  bottom: 5px;
-  right: 5px;
   color: white;
   background-color: red;
   padding: 3px;
